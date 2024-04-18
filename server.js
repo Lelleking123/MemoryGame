@@ -11,6 +11,14 @@ app.use(express.static(__dirname + "/public"));
 io.on("connection", (socket) => {
   console.log("A user connected");
 
+  // socket.on("revealCards", (data) => {
+  //   const { firstCard, secondCard } = data;
+
+  //   const match = firstCard === secondCard;
+
+  //   socket.emit("revealCards", { match });
+  // });
+
   socket.on("addText", () => {
     // Generate some sample text (you can customize this)
     console.log("hello");

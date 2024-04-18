@@ -3,41 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MemoryGame</title>
-    <link rel="icon" href="icon.jpg" />
+    <title>Memory Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <div id="board">
-      <button id="addTextBtn">Add Text</button>
-      <div id="textArea"></div>
+    <div class="background">
+      <h1>Memory Game</h1>
+      <div id="board"></div>
+      <div id="tiles"></div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
-    <script>
-      const socket = io();
-
-      document.getElementById("addTextBtn").addEventListener("click", () => {
-        // console.log("click");
-        socket.emit("addText");
-      });
-      socket.on("textAdded", (data) => {
-        const textArea = document.getElementById("textArea");
-        const newText = document.createElement("p");
-        newText.textContent = data.text;
-        textArea.appendChild(newText);
-      });
-
-      socket.on("move", (data) => {
-        // Handle received moves from the server
-        // Update the game board on the client side
-        // You need to implement this part
-        console.log("Received move:", data);
-      });
-
-      // Add event listeners to handle user actions and emit moves to the server
-      // You need to implement this part
-    </script>
+    <script src="game.js"></script>
   </body>
 </html>

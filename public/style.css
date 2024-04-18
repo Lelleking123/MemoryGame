@@ -1,0 +1,43 @@
+h1 {
+  font-style: italic;
+  text-align: center;
+}
+
+.background {
+  background-image: url("Space\ copy.jpg"); /* Specify the URL of your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* filter: blur(2px); */
+}
+
+#board {
+}
+
+#tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+  flex: 0 0 calc(25% - 20px);
+}
+
+.selected {
+  background-color: #ffcc00;
+}
+
+.matched {
+  background-color: #00cc00;
+}

@@ -13,11 +13,25 @@
           <div class="kontakt-box">
             <div class="Högra-sidan">
               <h1>Sign In</h1>
-              <form>
-                <input type="text" class="textfält" placeholder="USERNAME" />
-                <input type="text" class="textfält" placeholder="EMAIL" />
-                <input type="text" class="textfält" placeholder="PHONE" />
-                <!-- <textarea placeholder="Message" class="textfält"></textarea> -->
+              <form action="/formular/signup" method="POST">
+                <input
+                  type="text"
+                  name="username"
+                  class="textfält"
+                  placeholder="USERNAME"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  class="textfält"
+                  placeholder="PASSWORD"
+                />
+                <!-- <input
+                  type="number"
+                  name="phone"
+                  class="textfält"
+                  placeholder="PHONE"
+                /> -->
                 <input type="submit" value="Submit" class="knapp" />
               </form>
             </div>
